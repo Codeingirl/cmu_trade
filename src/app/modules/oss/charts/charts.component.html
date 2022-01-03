@@ -1,0 +1,29 @@
+<div class="card card-custom gutter-b">
+    <div class="card-header">
+        <div class="card-title">
+            <!-- <h3 class="card-label">ยอดเงินที่ใช้ได้ทั้งหมด (บาท)</h3> -->
+            <div class="account-management-heading-left">
+                <h3 class="heading-h4">สรุปจำนวนคำร้องทั้งหมด</h3>
+                <span class="small-txt"><i class="ic ic-redo pointer"></i>ข้อมูล ณ เวลา 00.15 น.</span>
+            </div>
+            <p class="price"><span> </span></p>
+        </div>
+        <div class="card-toolbar">
+            <!-- <button type="button" class="btn btn-gradient">ตั้งค่าบัญชี</button> -->
+        </div>
+    </div>
+    <div class="card-body" style="height: 470px;">
+        <div class="row account-management-summary matchHeight-ipad-group summary-credit">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div id="kt_mixed_widget_1_chart" class="card-rounded-bottom" [style.height]="'200px'">
+                    <div id="chart">
+                        <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+                            [dataLabels]="chartOptions.dataLabels" [plotOptions]="chartOptions.plotOptions"
+                            [yaxis]="chartOptions.yaxis" [xaxis]="chartOptions.xaxis" [legend]="chartOptions.legend"
+                            [colors]="chartOptions.colors" [grid]="chartOptions.grid"></apx-chart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

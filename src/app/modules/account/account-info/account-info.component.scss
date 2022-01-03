@@ -1,0 +1,190 @@
+.account-management-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.account-management-heading.d-column {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+    border-bottom: 0;
+}
+
+.account-management-heading-left {
+    margin-right: 15px;
+}
+
+.heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.heading-h4, h4 {
+    font-size: 18px;
+}
+
+.account-management-heading-left .small-txt, .account-management-heading.d-column .price {
+    font-family: Prompt;
+    font-size: 10px;
+    color: #999;
+}
+
+.price span {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-left: 0;
+    margin-top: 0;
+    display: inline-block;
+}
+
+.row.account-management-summary {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.account-management-summary {
+    margin-top: 20px;
+}
+
+.account-management-summary-list {
+    border-radius: 10px;
+    border: 1px solid #eee;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.account-management-summary.summary-credit .account-management-summary-list .top {
+    background: #465968;
+    background: linear-gradient(
+90deg,#465968,#232d34);
+}
+
+.account-management-summary-list .top {
+    padding: 10px 20px;
+    position: relative;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    display: inline-block;
+    word-break: break-word;
+    min-height: 83px;
+}
+
+.account-management-summary-list .top .heading {
+    margin-bottom: 5px;
+    color: #fff;
+    margin-top: 4px;
+    font-size: 15px;
+}
+
+.account-management-summary-list .top .detail {
+    line-height: 1;
+    color: #fff;
+    margin-top: 8px;
+}
+
+.a-right {
+    text-align: right!important;
+}
+
+.middle {
+    width: 100%;
+    padding-left: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.account-management-summary-list .middle .list span {
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+    display: block;
+}
+
+.account-management-summary-list .middle .list span.c-big {
+    font-size: 22px;
+}
+
+// .middle .list {
+//     margin-bottom: 0;
+//     min-height: 45px;
+//     overflow: hidden;
+// }
+
+.c-green {
+    color: #4dcc89!important;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.account-management-summary-list .bottom {
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    background-color: #fafafa;
+    text-align: center;
+    -webkit-border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.account-management-summary-list .bottom a {
+    color: #4dcc89;
+    font-size: 14px;
+    margin: 0 8px;
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 20px;
+    background-color: #00a950;
+    color: #fff!important;
+    margin-bottom: 0;
+    font-weight: 700;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none!important;
+    white-space: nowrap;
+    background-image: none;
+    border: 1px solid transparent;
+    // border-radius: 20px;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn.btn-gradient {
+    background: #02aa52;
+    background: linear-gradient(
+126deg,#02aa52,#61d699);
+    border: 0;
+}

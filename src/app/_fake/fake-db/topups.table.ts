@@ -1,0 +1,72 @@
+export class TopUpsTable {
+  public static topups: any = [
+    {
+      id: 1,
+      userName: 'C000001',
+      firstName: 'Sonni',
+      lastName: 'Gabotti',
+      email: 'sgabotti0@wsj.com',
+      bankcode: 'KBANK',
+      bankaccount: '0973328246',
+      amount: 100,
+      status: 1,
+      dateOfBbirth: '10/14/1950',
+      ipAddress: '251.237.126.210',
+      type: 1,
+      _userId: 1,
+      _createdDate: '09/12/2021 20.36',
+      _updatedDate: '05/31/2013'
+    },
+    {
+      id: 2,
+      userName: 'C000001',
+      firstName: 'Sonni',
+      lastName: 'Gabotti',
+      email: 'sgabotti0@wsj.com',
+      bankcode: 'KBANK',
+      bankaccount: '0973328246',
+      amount: 100,
+      status: 2,
+      dateOfBbirth: '10/14/1950',
+      ipAddress: '251.237.126.210',
+      type: 1,
+      _userId: 1,
+      _createdDate: '19/12/2021 12.44',
+      _updatedDate: '05/31/2013'
+    },
+    {
+      id: 3,
+      userName: 'C000002',
+      firstName: 'Sonni',
+      lastName: 'Gabotti',
+      email: 'sgabotti0@wsj.com',
+      bankcode: 'KBANK',
+      bankaccount: '5008886448',
+      amount: 300,
+      status: 1,
+      dateOfBbirth: '10/14/1950',
+      ipAddress: '251.237.126.210',
+      type: 1,
+      _userId: 1,
+      _createdDate: '20/12/2021 18.12',
+      _updatedDate: '05/31/2013'
+    },
+    {
+      id: 4,
+      userName: 'C000003',
+      firstName: 'Sonni',
+      lastName: 'Gabotti',
+      email: 'sgabotti0@wsj.com',
+      bankcode: 'SCB',
+      bankaccount: '0631820276',
+      amount: 400,
+      status: 3,
+      dateOfBbirth: '10/14/1950',
+      ipAddress: '251.237.126.210',
+      type: 1,
+      _userId: 1,
+      _createdDate: '20/12/2021 18.12',
+      _updatedDate: '05/31/2013'
+    }
+  ];
+}

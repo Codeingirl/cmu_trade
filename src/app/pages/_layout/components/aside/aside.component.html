@@ -1,0 +1,470 @@
+<!--begin::Brand-->
+<div class="brand flex-column-auto" id="kt_brand" [ngClass]="brandClasses">
+  <!--begin::Logo-->
+  <a routerLink="/">
+    <h4></h4>
+    <!-- <img alt="Logo" [attr.src]="headerLogo" /> -->
+  </a>
+  <!--end::Logo-->
+  <ng-container *ngIf="asideSelfMinimizeToggle">
+    <button class="brand-toggle btn btn-sm px-0" id="kt_aside_toggle">
+      <span [inlineSVG]="'./assets/media/svg/icons/Navigation/Angle-double-left.svg'" cacheSVG="true"
+        class="svg-icon svg-icon-xl"></span>
+    </button>
+  </ng-container>
+</div>
+<!--end::Brand-->
+
+<!--begin::Aside Menu-->
+<div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
+  <ng-container *ngIf="disableAsideSelfDisplay">
+    <!--begin::Header Logo-->
+    <a routerLink="/">
+      <img alt="Logo" [attr.src]="headerLogo" />
+    </a>
+    <!--end::Header Logo-->
+  </ng-container>
+  <!--begin::Menu Container-->
+  <div id="kt_aside_menu" class="aside-menu" [ngClass]="asideMenuCSSClasses" data-menu-vertical="1"
+    [attr.data-menu-scroll]="asideMenuScroll" [attr.data-menu-dropdown]="asideMenuDropdown"
+    data-menu-dropdown-timeout="500" style="background: linear-gradient(180deg,#465968,#232d34);">
+    <!-- begin::Menu Nav -->
+    <ul class="menu-nav" [ngClass]="ulCSSClasses">
+      <!-- begin::1 Level -->
+      <li class="menu-item" aria-haspopup="true" routerLinkActive="menu-item-active">
+        <a class="menu-link" routerLink="/account" routerLinkActive="active">
+          <span [inlineSVG]="'./assets/media/svg/icons/Design/Layers.svg'" cacheSVG="true"
+            class="svg-icon menu-icon"></span>
+          <span class="menu-text" translate="MENU.DASHBOARD"></span>
+          <!-- <span class="menu-text">บัญชี</span> -->
+        </a>
+      </li>
+      <!-- end::1 Level -->
+
+      <!-- Components -->
+      <!-- begin::section -->
+      <li class="menu-section">
+        <h4 class="menu-text">ระบบบริหารจัดการ</h4>
+        <i class="menu-icon flaticon-more-v2"></i>
+      </li>
+      <!-- end:: section -->
+      <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"
+        routerLinkActive="menu-item-open">
+        <a class="menu-link menu-toggle" routerLinkActive="active" href="/ecommerce">
+          <span [inlineSVG]="'./assets/media/svg/icons/Shopping/Wallet.svg'" cacheSVG="true"
+            class="svg-icon menu-icon"></span>
+          <span class="menu-text">ระบบ OSS</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="menu-submenu">
+          <i class="menu-arrow"></i>
+          <ul class="menu-subnav">
+            <!-- <li class="menu-item" aria-haspopup="true">
+              <span class="menu-link">
+                <span class="menu-text">eCommerce</span>
+              </span>
+            </li> -->
+
+            <!-- begin::2 Level -->
+            <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+              <a class="menu-link" routerLink="/oss" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">สรุปจำนวนคำร้องทั้งหมด</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+          </ul>
+        </div>
+      </li>
+      <!-- Material-UI -->
+
+
+      <!-- Ng-Bootstrap -->
+      <!-- begin::1 Level -->
+      <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"
+        routerLinkActive="menu-item-open">
+        <a class="menu-link menu-toggle" routerLinkActive="active" href="/ecommerce">
+          <span [inlineSVG]="'./assets/media/svg/icons/Shopping/ATM.svg'" cacheSVG="true"
+            class="svg-icon menu-icon"></span>
+          <span class="menu-text">ระบบ E-Office</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="menu-submenu">
+          <i class="menu-arrow"></i>
+          <ul class="menu-subnav">
+            <!-- begin::2 Level -->
+            <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+              <a class="menu-link" routerLink="/e-office/receiveletter" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">หนังสือรับ</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+
+            <!-- begin::2 Level -->
+            <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+              <a class="menu-link" routerLink="/e-office/deliveryletter" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">หนังสือส่ง</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+            <!-- begin::2 Level -->
+            <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+              <a class="menu-link" routerLink="/e-office/commandletter" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">คำสั่ง</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+            <!-- begin::2 Level -->
+            <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+              <a class="menu-link" routerLink="/e-office/announcement" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">ประกาศ</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+            <!-- begin::2 Level -->
+            <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+              <a class="menu-link" routerLink="/e-office/memo" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">บันทึกข้อความ</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+            <!-- begin::2 Level -->
+            <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+              <a class="menu-link" routerLink="/memo/lhc" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">หนังสือส่งผู้นำชุมชน</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+          </ul>
+        </div>
+      </li>
+      <!-- end::1 Level -->
+      <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"
+      routerLinkActive="menu-item-open">
+      <a class="menu-link menu-toggle" routerLinkActive="active" href="/ecommerce">
+        <span [inlineSVG]="'./assets/media/svg/icons/Shopping/Wallet.svg'" cacheSVG="true"
+          class="svg-icon menu-icon"></span>
+        <span class="menu-text">ระบบขออนุญาตก่อสร้าง</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="menu-submenu">
+        <i class="menu-arrow"></i>
+        <ul class="menu-subnav">
+          <!-- <li class="menu-item" aria-haspopup="true">
+            <span class="menu-link">
+              <span class="menu-text">eCommerce</span>
+            </span>
+          </li> -->
+
+          <!-- begin::2 Level -->
+          <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+            <a class="menu-link" routerLink="/topup/topup-auto" routerLinkActive="active">
+              <i class="menu-bullet menu-bullet-dot">
+                <span></span>
+              </i>
+              <span class="menu-text">สิ่งปลูกสร้าง</span>
+            </a>
+          </li>
+          <!-- end::2 Level -->
+
+          <!-- begin::2 Level -->
+          <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+            <a class="menu-link" routerLink="/topup/topup-manual" routerLinkActive="active">
+              <i class="menu-bullet menu-bullet-dot">
+                <span></span>
+              </i>
+              <span class="menu-text">กรรมสิทธิ์ที่ดิน </span>
+            </a>
+          </li>
+          <!-- end::2 Level -->
+        </ul>
+      </div>
+    </li>
+
+    <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"
+    routerLinkActive="menu-item-open">
+    <a class="menu-link menu-toggle" routerLinkActive="active" href="/ecommerce">
+      <span [inlineSVG]="'./assets/media/svg/icons/Shopping/Wallet.svg'" cacheSVG="true"
+        class="svg-icon menu-icon"></span>
+      <span class="menu-text">ระบบขอใบรับรองฯ</span>
+      <i class="menu-arrow"></i>
+    </a>
+    <div class="menu-submenu">
+      <i class="menu-arrow"></i>
+      <ul class="menu-subnav">
+        <!-- <li class="menu-item" aria-haspopup="true">
+          <span class="menu-link">
+            <span class="menu-text">eCommerce</span>
+          </span>
+        </li> -->
+
+        <!-- begin::2 Level -->
+        <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+          <a class="menu-link" routerLink="/topup/topup-auto" routerLinkActive="active">
+            <i class="menu-bullet menu-bullet-dot">
+              <span></span>
+            </i>
+            <span class="menu-text">ประเภทคำขอ</span>
+          </a>
+        </li>
+        <!-- end::2 Level -->
+
+        <!-- begin::2 Level -->
+        <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+          <a class="menu-link" routerLink="/topup/topup-manual" routerLinkActive="active">
+            <i class="menu-bullet menu-bullet-dot">
+              <span></span>
+            </i>
+            <span class="menu-text">ผลการอนุมัติ</span>
+          </a>
+        </li>
+        <!-- end::2 Level -->
+         <!-- begin::2 Level -->
+         <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+          <a class="menu-link" routerLink="/topup/topup-manual" routerLinkActive="active">
+            <i class="menu-bullet menu-bullet-dot">
+              <span></span>
+            </i>
+            <span class="menu-text">ค่าธรรมเนียมการขอใบรับรองฯ</span>
+          </a>
+        </li>
+        <!-- end::2 Level -->
+      </ul>
+    </div>
+  </li>
+
+  <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"
+    routerLinkActive="menu-item-open">
+    <a class="menu-link menu-toggle" routerLinkActive="active" href="/ecommerce">
+      <span [inlineSVG]="'./assets/media/svg/icons/Shopping/Wallet.svg'" cacheSVG="true"
+        class="svg-icon menu-icon"></span>
+      <span class="menu-text">ระบบชำระค่าธรรมเนียมขยะ</span>
+      <i class="menu-arrow"></i>
+    </a>
+    <div class="menu-submenu">
+      <i class="menu-arrow"></i>
+      <ul class="menu-subnav">
+        <!-- <li class="menu-item" aria-haspopup="true">
+          <span class="menu-link">
+            <span class="menu-text">eCommerce</span>
+          </span>
+        </li> -->
+
+        <!-- begin::2 Level -->
+        <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+          <a class="menu-link" routerLink="/topup/topup-auto" routerLinkActive="active">
+            <i class="menu-bullet menu-bullet-dot">
+              <span></span>
+            </i>
+            <span class="menu-text">สรุปจำนวนรายการทั้งหมด</span>
+          </a>
+        </li>
+        <!-- end::2 Level -->
+
+        <!-- begin::2 Level -->
+        <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+          <a class="menu-link" routerLink="/topup/topup-manual" routerLinkActive="active">
+            <i class="menu-bullet menu-bullet-dot">
+              <span></span>
+            </i>
+            <span class="menu-text">สรุปยอดเงินการชำระค่าขยะ</span>
+          </a>
+        </li>
+        <!-- end::2 Level -->
+         <!-- begin::2 Level -->
+         <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+          <a class="menu-link" routerLink="/topup/topup-manual" routerLinkActive="active">
+            <i class="menu-bullet menu-bullet-dot">
+              <span></span>
+            </i>
+            <span class="menu-text">ประมาณการยอดเงินการชำระ</span>
+          </a>
+        </li>
+        <!-- end::2 Level -->
+         <!-- begin::2 Level -->
+         <li class="menu-item" aria-haspopup="true" data-menu-toggle="hover" routerLinkActive="menu-item-active">
+          <a class="menu-link" routerLink="/topup/topup-manual" routerLinkActive="active">
+            <i class="menu-bullet menu-bullet-dot">
+              <span></span>
+            </i>
+            <span class="menu-text">เปรียบเทียบยอดเงินการชำระ</span>
+          </a>
+        </li>
+        <!-- end::2 Level -->
+      </ul>
+    </div>
+  </li>
+      <!-- Applications -->
+      <!-- begin::section -->
+      <li class="menu-section">
+        <h4 class="menu-text">รายงาน</h4>
+        <i class="menu-icon flaticon-more-v2"></i>
+      </li>
+      <!-- end:: section -->
+
+      <!-- ECommerce -->
+      <!-- begin::1 Level -->
+      <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"
+        routerLinkActive="menu-item-open">
+        <a class="menu-link menu-toggle" routerLinkActive="active" href="/ecommerce">
+          <span [inlineSVG]="'./assets/media/svg/icons/Layout/Layout-4-blocks.svg'" cacheSVG="true"
+            class="svg-icon menu-icon"></span>
+          <span class="menu-text">รายงาน</span>
+
+        </a>
+        <div class="menu-submenu">
+          <i class="menu-arrow"></i>
+          <ul class="menu-subnav">
+            <!-- <li class="menu-item" aria-haspopup="true">
+              <span class="menu-link">
+                <span class="menu-text">eCommerce</span>
+              </span>
+            </li> -->
+          </ul>
+        </div>
+      </li>
+      <!-- end::1 Level -->
+      <!-- Custom -->
+      <!-- begin::section -->
+      <li class="menu-section">
+        <h4 class="menu-text">กำหนดสิทธิการใช้งาน</h4>
+        <i class="menu-icon flaticon-more-v2"></i>
+      </li>
+      <!-- end:: section -->
+      <!-- begin::1 Level -->
+      <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"
+        routerLinkActive="menu-item-open">
+        <a class="menu-link menu-toggle" routerLinkActive="active" href="/wizards">
+          <span [inlineSVG]="'./assets/media/svg/icons/Tools/Tools.svg'" cacheSVG="true"
+            class="svg-icon menu-icon"></span>
+          <span class="menu-text">กำหนดค่าเริ่มต้นระบบ</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="menu-submenu">
+          <i class="menu-arrow"></i>
+          <ul class="menu-subnav">
+
+            <!-- begin::2 Level -->
+            <li class="menu-item" routerLinkActive="menu-item-active" aria-haspopup="true" data-menu-toggle="hover">
+              <a class="menu-link" routerLink="/wizards/wizard-1" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">กำหนดธนาคาร</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+            <!-- begin::2 Level -->
+            <li class="menu-item" routerLinkActive="menu-item-active" aria-haspopup="true" data-menu-toggle="hover">
+              <a class="menu-link" routerLink="/wizards/wizard-2" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">กำหนดบัญชีรับ</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+            <!-- begin::2 Level -->
+            <li class="menu-item" routerLinkActive="menu-item-active" aria-haspopup="true" data-menu-toggle="hover">
+              <a class="menu-link" routerLink="/wizards/wizard-3" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">กำหนดบัญชีถอน</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+
+            <!-- begin::2 Level -->
+            <li class="menu-item" routerLinkActive="menu-item-active" aria-haspopup="true" data-menu-toggle="hover">
+              <a class="menu-link" routerLink="/wizards/wizard-4" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">กำหนดเงื่อนไขยี่กี่</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+          </ul>
+        </div>
+      </li>
+      <!-- Wizards -->
+      <!-- begin::1 Level -->
+      <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover"
+        routerLinkActive="menu-item-open">
+        <a class="menu-link menu-toggle" routerLinkActive="active" href="/wizards">
+          <span [inlineSVG]="'./assets/media/svg/icons/General/Shield-check.svg'" cacheSVG="true"
+            class="svg-icon menu-icon"></span>
+          <span class="menu-text">ผู้ใช้และสิทธิ์การใช้งาน</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="menu-submenu">
+          <i class="menu-arrow"></i>
+          <ul class="menu-subnav">
+            <li class="menu-item menu-item-parent" aria-haspopup="true">
+              <span class="menu-link">
+                <span class="menu-text">กำหนดผู้ใช้งาน</span>
+              </span>
+            </li>
+            <!-- begin::2 Level -->
+            <li class="menu-item" routerLinkActive="menu-item-active" aria-haspopup="true" data-menu-toggle="hover">
+              <a class="menu-link" routerLink="/user-management/users" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">กำหนดผู้ใช้งาน</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+            <!-- begin::2 Level -->
+            <li class="menu-item" routerLinkActive="menu-item-active" aria-haspopup="true" data-menu-toggle="hover">
+              <a class="menu-link" routerLink="/user-management/roles" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">กำหนดสิทธิ์การใช้งาน</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+            <!-- begin::2 Level -->
+            <li class="menu-item" routerLinkActive="menu-item-active" aria-haspopup="true" data-menu-toggle="hover">
+              <a class="menu-link" routerLink="/wizards/wizard-3" routerLinkActive="active">
+                <i class="menu-bullet menu-bullet-dot">
+                  <span></span>
+                </i>
+                <span class="menu-text">กำหนดเมนู</span>
+              </a>
+            </li>
+            <!-- end::2 Level -->
+          </ul>
+        </div>
+      </li>
+      <!-- end::1 Level -->
+
+      <!-- Errors -->
+    </ul>
+    <!-- end::Menu Nav -->
+  </div>
+  <!--end::Menu Container-->
+</div>
+<!--end::Aside Menu-->

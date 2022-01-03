@@ -1,0 +1,137 @@
+<div class="section">
+    <div class="content">
+        <div class="card">
+            <div class="header">
+                <h2 style="color:#fff;">{{title}}</h2>
+            </div>
+        </div>
+        <div class="contianer">
+            <div class="row">
+                <div class="column side">
+                    <div class="card shadow">
+                        <table id="coin">
+                            <tr>
+                                <th>Coin</th>
+                                <th>price</th>
+                                <th>24H</th>
+                            </tr>
+                            <tr *ngFor="let coins of coin">
+                                <td>{{coins.name}}</td>
+                                <td>{{coins.price}}</td>
+                                <td>{{coins.value24h}}</td>
+                            </tr>
+                            <tr *ngFor="let coins of coin">
+                                <td>{{coins.name}}</td>
+                                <td>{{coins.price}}</td>
+                                <td>{{coins.value24h}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="column middle">
+                    <div class="col-md-12 card shadow">
+                    <div class="row">
+                    <div class="col-md-2 center"><button><i class="far fa-chart-bar shotcut"></i></button></div>
+                    <div class="col-md-2 center"><button><i class="fas fa-plus-circle shotcut"></i></button></div>
+                    <div class="col-md-2 center"><button><i class="fas fa-history shotcut"></i></button></div>
+                    <div class="col-md-2 center"><button><i class="fas fa-arrow-circle-left shotcut"></i></button></div>
+                    <div class="col-md-2 center"><button><i class="fas fa-bell shotcut"></i></button></div>
+                    <div class="col-md-2 center"><button><i class="fas fa-pen shotcut"></i></button></div>
+                </div>
+            </div>
+                    <div class="card shadow">
+                        <div id="chart">
+                            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+                                [xaxis]="chartOptions.xaxis" [yaxis]="chartOptions.yaxis" [title]="chartOptions.title">
+                            </apx-chart>
+                        </div>
+                    </div>
+                    <div class="col-md-12 card shadow">
+                        <div class="row">
+                        <div class="col-md-2 center"><button><i class="far fa-chart-bar shotcut"></i></button></div>
+                        <div class="col-md-2 center"><button><i class="fas fa-plus-circle shotcut"></i></button></div>
+                        <div class="col-md-2 center"><button><i class="fas fa-history shotcut"></i></button></div>
+                        <div class="col-md-2 center"><button><i class="fas fa-arrow-circle-left shotcut"></i></button></div>
+                        <div class="col-md-2 center"><button><i class="fas fa-bell shotcut"></i></button></div>
+                        <div class="col-md-2 center"><button><i class="fas fa-pen shotcut"></i></button></div>
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="column side">
+                            <div class="card shadow">
+                                <span class="text-white bg-green">BUY</span>
+                                <table id="coin">
+                                    <tr>
+                                        <th>Coin</th>
+                                        <th>price</th>
+                                        <th>Volume</th>
+                                    </tr>
+                                    <tr *ngFor="let coins_buy of coin_buy">
+                                        <td>{{coins_buy.name}}</td>
+                                        <td>{{coins_buy.price}}</td>
+                                        <td>{{coins_buy.volume}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="column side">
+                            <div class="card shadow">
+                                <span class="text-white bg-red">SELL</span>
+                                <table id="coin_sell" class="title-red">
+                                    <tr>
+                                        <th>Coin</th>
+                                        <th>price</th>
+                                        <th>Volume</th>
+                                    </tr>
+                                    <tr *ngFor="let coins_buy of coin_buy">
+                                        <td>{{coins_buy.name}}</td>
+                                        <td>{{coins_buy.price}}</td>
+                                        <td>{{coins_buy.volume}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column side">
+                    <div class="contianer">
+                        <div class="card shadow">
+                            <span class="text-white bg-red">SELL</span>
+                            <table id="coin_sell">
+                                <tr>
+                                    <th>Vol(THB)</th>
+                                    <th>Vol()</th>
+                                    <th>Price(THB)</th>
+                                </tr>
+                                <tr *ngFor="let sell of volume_sell">
+                                    <td>{{sell.volTHB}}</td>
+                                    <td>{{sell.volCoins}}</td>
+                                    <td>{{sell.volprice}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="contianer">
+                        <div class="card shadow">
+                            <span class="text-white bg-green">BUY</span>
+                            <table id="coin">
+                                <tr>
+                                    <th>Vol(THB)</th>
+                                    <th>Vol()</th>
+                                    <th>Price(THB)</th>
+                                </tr>
+                                <tr *ngFor="let buy of volume_buy">
+                                    <td>{{buy.volTHB}}</td>
+                                    <td>{{buy.volCoins}}</td>
+                                    <td>{{buy.volprice}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

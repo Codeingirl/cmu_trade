@@ -1,0 +1,206 @@
+span{
+  padding: 0em 1em 0em;
+}
+.content{
+        max-width: 100%;
+        padding: 0em 1em;
+        margin: auto;
+        line-height: 1.75;
+        font-size: 1.25em;
+}
+.header {
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    background-color: transparent;
+  }
+  
+  /* Container for flexboxes */
+  .row {
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  /* Create three unequal columns that sits next to each other */
+  .column {
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Left and right column */
+  .column.side {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  
+  /* Middle column */
+  .column.middle {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+  }
+  
+  /* Style the footer */
+  .footer {
+    padding: 10px;
+    text-align: center;
+
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .row {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+
+/* table */
+  #coin {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color:#fff;
+  }
+  
+  #coin td, #coin th {
+    padding: 8px;
+  }
+  
+  #coin tr:hover {background-color: #413f53;}
+  
+  #coin th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color:#fff;
+  }
+
+  #coin_sell {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color:#fff;
+  }
+  
+  #coin_sell td, #coin_sell th {
+    padding: 8px;
+  }
+  
+  #coin_sell  tr:hover {background-color: #413f53;}
+  
+  #coin_sell th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #aa3904;
+    color:#fff;
+  }
+  /* table */
+
+  a,
+button {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	text-decoration: none;
+}
+
+img,
+video {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+img {
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+}
+
+// Section: Elements
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 80rem;
+	min-height: auto;
+	width: 100%;
+	padding: 0 2rem;
+	margin: 0 auto;
+}
+
+// Section: Main
+.main {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 2rem 0;
+
+	.column {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		justify-content: center;
+		align-items: stretch;
+		gap: 2rem;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+
+		&-item {
+			width: 100%;
+			height: auto;
+			padding: 2rem 1rem;
+			border: none;
+			outline: none;
+			border-radius: 0.25rem;
+			background: var(--color-white);
+			box-shadow: var(--shadow-large);
+		}
+	}
+
+	// Responsive Media Query
+	@media only screen and(max-width: 1024px) {
+		.column {
+			display: grid;
+			grid-template-columns: 1fr;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+}
+
+.card{
+  background: #202940;
+  
+}
+
+.text-white{
+  color: #fff;
+}
+
+.bg-green{
+  background-color: #04AA6D;
+}
+
+.bg-red{
+  background-color: #aa3904;
+}
+
+.center{
+  text-align: center;
+}
+
+.shotcut:hover{color: #8a9ae4fd;}
+  
+.shadow{
+  box-shadow: 3px 5px 6px 0px #6c79af83;
+}
